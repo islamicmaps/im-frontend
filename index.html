@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="">
+
+    <!--Add CSS sources-->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/src/main.css">
+    
+</head>
+<body onload="onloadPage()">
+
+    <!-- Waiting Page -->
+    <div id="waitingPage" style="z-index: 1;">
+      <img src="images/logo/islamicmaps.png" style="margin-right: auto;margin-left: auto;margin-top: 10%;display: block;opacity: 0.5;" alt="Islamicmaps">
+    </div>
+  
+    <div id="map" style="z-index: -1;"></div>
+
+    <!-- Opacity Slider -->
+    <!-- <div class="map-overlay top">
+      <div class="map-overlay-inner">
+        <span id="vectorLayerOpacity"></span><br>
+        <input
+          id="sliderOpacity"
+          type="range"
+          min="0"
+          max="100"
+          step="0"
+          value="50"
+          oninput="getOpacityVal(sliderOpacity.value, 'public')"
+        />
+      </div>
+    </div> -->
+
+    <!-- Islamic Map watermark -->
+    <a id="islamicmapWatermark" target="_blank">
+      <img id="watermark" style="width: 50px;" src="images/logo/islamicmaps_thumb.png"/>
+    </a>
+
+    <!-- Place search bar -->
+    <div id="topBarSearch" class="md-form" style="width: 150px;">
+      <input type="search" dir="lft" id="searchPlaceComplete" class="form-control mdb-autocomplete" placeholder="">
+    </div>
+
+    <!-- Language button -->
+    <div id="langButtonDiv" class="md-form">
+      <button id="langButton" class="btn btn-default" data-toggle="modal" data-target="#langModal"><i id="langText" class="fa fa-language" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="langModal" tabindex="-1" role="dialog" aria-labelledby="langModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="selectLanguage" style="font-size: medium;"></h5>
+          </div>
+            <div class="modal-header" id="currentLanguage"></div>
+            <div class="modal-header" id="langTable">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Basemap layers dropdown -->
+    <div class="dropdown" id="basemapDropdown">
+        <button id="basemapName" class="btn btn-primary" type="button" data-toggle="dropdown" style="width: 113px;">
+        <span class="caret"></span></button>
+        <ul id="basemapDropdownUl" class="dropdown-menu">
+            <li id="light" style="background-color:#f0f0f0" class="disabled" onclick="switchBasemap(this.id)"><a></a></li>
+            <li id="dark" onclick="switchBasemap(this.id)"><a></a></li>
+            <li id="streets" onclick="switchBasemap(this.id)"><a></a></li>
+            <li id="outdoors" onclick="switchBasemap(this.id)"><a></a></li>
+            <li id="satellite" onclick="switchBasemap(this.id)"><a></a></li>
+            <li id="satellite-streets" onclick="switchBasemap(this.id)"><a></a></li>
+        </ul>
+    </div>
+
+    <!--Add JS sources-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.9.0/lodash.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="config/default.js"></script>
+    <script src="js/src/onload.js"></script>
+    <script src="js/src/i18n.js"></script>
+    <script src="js/src/basemap.js"></script>
+    <script src="js/src/toolbox.js"></script>
+
+</body>
+</html>
