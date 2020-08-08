@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="">
+
+    <!--Add CSS sources-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/src/main.css">
+
+    <style>
+        body { 
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
+        }
+        .error-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+        .error-actions {
+            margin-top:15px;
+            margin-bottom:15px;
+        }
+        .error-actions .btn { 
+            margin-right:10px; 
+        }
+        .table {
+            margin: auto;
+            width: 50% !important; 
+        }
+    </style>
+
+</head>
+
+<body onload="onload5xx()">
+
+    <!-- Islamic Map watermark -->
+    <a id="islamicmapWatermark" target="_blank">
+        <img id="watermark" style="width: 50px;" src="images/logo/islamicmaps_thumb.png"/>
+    </a>
+
+    <!-- 5xx Error Message -->
+    <table class="table" style="margin-top: 50px;">
+        <tbody>
+          <tr>
+            <td>Resource is down!</td>
+            <td>Ressource ist ausgefallen!</td>
+            <td>¡El recurso está agotado!</td>
+          </tr>
+          <tr>
+            <td>La ressource est en panne!</td>
+            <td>Sumber daya sedang down!</td>
+            <td>La risorsa è in esaurimento!</td>
+          </tr>
+          <tr>
+            <td>O recurso caiu!</td>
+            <td>Kaynak çalışmıyor!</td>
+            <td>संसाधन नीचे है!</td>
+          </tr>
+          <tr>
+            <td style="text-align: right;">الموارد معطلة!</td>
+            <td style="text-align: right;">وسائل نیچے ہے!</td>
+            <td style="text-align: right;">منابع کم شده است!</td>
+          </tr>
+          <tr>
+            <td>Ресурс не работает!</td>
+            <td>资源不足！</td>
+            <td>リソースがダウンしています！</td>
+          </tr>
+          <tr>
+            <td>리소스가 다운되었습니다!</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!--Add JS sources-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.9.0/lodash.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="config/default.js"></script>
+    <script src="js/src/onload.js"></script>
+
+</body>
+</html>

@@ -1,2 +1,2 @@
-# im-frontend
-Islamicmaps Webmap
+# ISLAMICMAPS.ORG
+Website for Islamicmaps.org http://islamicmaps.org
