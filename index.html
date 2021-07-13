@@ -20,7 +20,7 @@
 
     <!-- Waiting Page -->
     <div id="waitingPage" style="z-index: 1;">
-      <img src="images/logo/islamicmaps.png" style="margin-right: auto;margin-left: auto;margin-top: 10%;display: block;opacity: 0.5;" alt="Islamicmaps">
+      <img src="images/logo/im_logo_small.png" style="width: 200px;margin-right: auto;margin-left: auto;margin-top: 10%;display: block;opacity: 0.5;" alt="Islamicmaps">
     </div>
   
     <div id="map" style="z-index: -1;"></div>
@@ -43,7 +43,7 @@
 
     <!-- Islamic Map watermark -->
     <a id="islamicmapWatermark" target="_blank">
-      <img id="watermark" style="width: 50px;" src="images/logo/islamicmaps_thumb.png"/>
+      <img id="watermark" style="width: 30px;" src="images/logo/im_logo_thumbnail.png"/>
     </a>
 
     <!-- Place search bar -->
@@ -55,6 +55,38 @@
     <div id="langButtonDiv" class="md-form">
       <button id="langButton" class="btn btn-default" data-toggle="modal" data-target="#langModal"><i id="langText" class="fa fa-language" aria-hidden="true"></i>
       </button>
+    </div>
+
+    <!-- Go Pro login form  -->
+    <div id="topBarTheme" class="md-form" style="width: 150px;">
+      <button id="themeButton" class="btn btn-success" data-toggle="modal" data-target="#login-modal">Theme
+      </button>
+      <!-- <a data-toggle="modal" data-target="#login-modal">Login Tr</a> -->
+    </div>
+
+    <!-- Create account form -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <!-- <h1>Login to Your Account</h1><br> -->
+          <form>
+
+          <input type="text" name="user" id="signInName" class="form-control mdb-autocomplete" placeholder="">
+
+          <input type="password" name="pass" id="signInPass" class="form-control mdb-autocomplete" placeholder="">
+
+          <input type="submit" disabled id="signInButton" class="btn btn-primary" type="button" value="">
+
+          <!-- <input type="text" name="user" placeholder="Username Tr">
+          <input type="password" name="pass" placeholder="Password Tr"> -->
+          <!-- <input type="submit" name="login" class="login loginmodal-submit" value="Login"> -->
+          </form>
+          
+          <div class="login-help">
+          <a target="blank" id="register"></a> - <a target="blank" id="forgetpassword"></a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Modal -->
