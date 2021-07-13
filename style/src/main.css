@@ -34,6 +34,22 @@ body {
     /* color:white; */
 }
 
+#topBarTheme {
+  /* margin-left: 10px;  */
+  position: absolute;
+  /* float: right; */
+  margin-top: 5px; /*5px*/
+  margin-left: 240px; /*5px*/
+  /* margin-right: 5px; */
+}
+
+#themeButton {
+  position: absolute;;
+  right: 5px;
+  visibility: visible;
+  /* margin-left: 5px; */
+}
+
 #basemapDropdown {
     /* margin-left: 10px;  */
     position: absolute;
